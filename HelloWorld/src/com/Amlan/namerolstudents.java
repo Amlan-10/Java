@@ -1,5 +1,6 @@
 package com.Amlan;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,6 +11,12 @@ public class namerolstudents {
         StudentSet.add(new Student("Rajesh",2));
         StudentSet.add(new Student("Ravi",3));
         StudentSet.add(new Student("Suresh",1));
-        System.out.println(StudentSet);
+
+        Student s1=new Student("Amlan",10);
+        Student s2=new Student("Ayan",4);
+
+        System.out.println(s1.compareTo(s2));
+//        System.out.println(StudentSet);
+
     }
 }
