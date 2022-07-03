@@ -1,13 +1,14 @@
 package com.Amlan;
 import java.util.Scanner;
-public class bit3 {
-    public static int findMinXor(int[] A,int n) {
-        int min_xor=Integer.MAX_VALUE;
-        for(int i=0;i<n;i++){
-            for(int j=i+1;j<n;j++){
-                min_xor=Math.min(min_xor, A[i] ^ A[j]);
-            }
-
+import java.util.Collections;
+import java.util.Arrays;
+public class bit3{
+    public static int findMinXor(int[] A) {
+        int n = A.length;
+        Arrays.sort(A);
+        int min_xor=A[0]^A[1];
+        for(int i=2;i<n;i++){
+            min_xor=Math.min(min_xor, A[i] ^ A[i-1]);
         }
         return min_xor;
     }
@@ -18,18 +19,6 @@ public class bit3 {
         for(int i=0;i<n;i++) {
             A[i] = sc.nextInt();
         }
-        System.out.println(findMinXor(A,n));
+        System.out.println(findMinXor(A));
     }
 }
-//public class Solution {
-//    public int findMinXor(int[] a) {
-//        int n=a.length;
-//        Arrays.sort(a);
-//        int min=a[0]^a[1];
-//        for(int i=2;i<n;i++){
-//            min=Math.min(min,a[i]^a[i-1]);
-//        }
-//        return min;
-//    }
-//}
-
