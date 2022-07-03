@@ -3,12 +3,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class bit5 {
     public static int[] singleNumber(int[] nums){
-        int ans=0,s=0,a=0,b=0,k=0;
+        int ans=0,a=0,b=0;
         int n=nums.length;
         Arrays.sort(nums);
         for(int i=0;i<n;i++) {
             ans = ans ^ nums[i];
-            k = ans;
         }
         ans = ans & ~(ans-1);
         for(int i=0;i<n;i++)  {
