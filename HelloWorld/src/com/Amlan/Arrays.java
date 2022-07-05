@@ -14,4 +14,5 @@ public class Arrays {
                 System.out.print("The number has been found in index :" + i);
         }
     }
+
 }
