@@ -1,10 +1,8 @@
 package com.Amlan;
-
 import java.util.Scanner;
 
 class Shape1 {
     protected double area;
-
     public void showArea() {
         System.out.println("Area: " + area);
     }
@@ -19,15 +17,11 @@ class Triangle1 extends Shape1 {
         this.height=height;
         area = (0.5)* base * height;
     }
-
-    public void showArea() {
-        System.out.println("Triangle Area: " + area);
-    }
 }
 
 class Rectangle1 extends Shape1 {
-    protected double length;
-    protected double breadth;
+    protected float length;
+    protected float breadth;
 
     public Rectangle1(float length, float breadth) {
         this.length = length;
@@ -35,9 +29,6 @@ class Rectangle1 extends Shape1 {
         area = length * breadth;
     }
 
-    public void showArea() {
-        System.out.println("Rectangle Area: " + area);
-    }
 }
 
 public class DynaMethDis {
@@ -58,6 +49,7 @@ public class DynaMethDis {
         Shape1 obj=new Triangle1(base,height);
         Shape1 obj1=new Rectangle1(length,breadth);
 
+        System.out.println("The Area of triangle and rectangle respectively are:");
         obj.showArea();
         obj1.showArea();
     }

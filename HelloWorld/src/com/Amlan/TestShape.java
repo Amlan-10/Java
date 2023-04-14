@@ -17,24 +17,16 @@ class Triangle extends Shape {
         this.height=height;
         area = (0.5)* base * height;
     }
-
-    public void showArea() {
-        System.out.println("Triangle Area: " + area);
-    }
 }
 
 class Rectanglee extends Shape {
-    protected double length;
-    protected double breadth;
+    protected float length;
+    protected float breadth;
 
     public Rectanglee(float length, float breadth) {
         this.length = length;
         this.breadth = breadth;
         area = length * breadth;
-    }
-
-    public void showArea() {
-        System.out.println("Rectangle Area: " + area);
     }
 }
 
