@@ -10,7 +10,7 @@ interface Employee {
     void bonus();
 }
 
-class Manager implements Employee {
+ class Manager implements Employee {
     int basic;
 
     public Manager(int basic) {
