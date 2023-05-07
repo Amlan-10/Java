@@ -7,7 +7,7 @@ public class EH2 {
     }
     public static void main(String args[]){
         try{
-            validate(19);
+            validate(13);
         }
         catch(ArithmeticException e)
         {
